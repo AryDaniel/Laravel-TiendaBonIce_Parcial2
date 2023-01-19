@@ -9,6 +9,7 @@
     <script src="{{asset('js/jquery-3.6.1.js')}}"></script>
 </head>
 <body style="background-color: #17a2b8;">
+    <x-layouts.menu/>
     <br><br><br><br><br><br><br><br>
     <div class="container ">
         <div class="row">
