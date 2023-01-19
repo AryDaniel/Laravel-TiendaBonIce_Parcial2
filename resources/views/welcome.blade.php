@@ -1,16 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BonIce</title>
-    <link rel="stylesheet" href="{{asset('css/bootstrap.css')}}">
-    <script src="{{asset('js/jquery-3.6.1.js')}}"></script>
-</head>
-<body style="background-color: #17a2b8;">
-    <x-layouts.menu/>
-    <br><br><br><br><br><br><br><br>
+@extends('components/layouts/plantillaAzul')
+@section('content')
     <div class="container ">
         <div class="row">
             <div class="col-12">
@@ -22,7 +11,7 @@
                         </div>
                         <p class="lead">
                         El rincon donde podras comprar BonIce:
-                         <ul>
+                        <ul>
                             <li>Ver catalogo</li>
                             <li>Registrar nuevos productos</li>
                             <li>Editar productos</li>
@@ -36,10 +25,4 @@
             </div>
         </div>
     </div>
-    <footer class="text-center">
-        <br><br><br><br><br><br>    
-        2022 &copy; Cetis107 BonIce
-    </footer>
-    <script src="{{asset('js/bootstrap.js')}}"></script>
-</body>
-</html>
+@endsection 
