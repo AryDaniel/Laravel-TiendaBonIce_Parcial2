@@ -11,4 +11,13 @@ class Helado extends Model
 
     protected $table = 'helados';
 
+    // ASIGNACIÓN MASIVA
+    /* Con esto estamos especificando que solos los
+    campos que aparezcan aqui seran los que iran 
+    a la base de datos */
+    protected $fillable = [
+        'nombre_producto',
+        'sabor',
+        'precio'
+    ];
 }

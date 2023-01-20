@@ -9,7 +9,7 @@
 
                 <br>
                 <div class="form-group">
-                    <input type="text" class="form-control" name="nombre_producto" placeholder="Teclea el nombre del producto">
+                    <input type="text" class="form-control" name="nombre" placeholder="Teclea el nombre del producto">
                 </div>
 
                 <br>

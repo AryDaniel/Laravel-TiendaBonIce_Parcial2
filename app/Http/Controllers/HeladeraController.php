@@ -25,9 +25,19 @@ class HeladeraController extends Controller
     {
         return view('helados.create');
     }
-
-    public function store()
+    /*
+        Request $request
+        nos permiten acceder a los datos title y body
+        en formato json 
+    */
+    public function store(Request $request)
     {
-        return 'In process';
+        $helado = new Helado;
+        $helado->nombre     = $request->input('nombre');
+        $helado->sabor      = $request->input('sabor');
+        $helado->precio     = $request->input('precio');
+        $helado->save();
+
+        return to_route('heladera.index');
     }
 }

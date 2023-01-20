@@ -1,6 +1,10 @@
 @extends('components/layouts/plantillaAzul')
 @section('content')
-    <div class="container" >
+<div class="text-center">
+    <a href="{{ route('heladera.create') }}" type="button" class="btn btn-danger">Crear nuevo registro</a>
+</div>
+<br>
+<div class="container" >
         <div class="row">
             <div class="col-12">
                 <table class="table table-hover">
@@ -30,9 +34,7 @@
                         @endforeach
                     </tbody>
                 </table>
-                <div class="text-center">
-                    {{$helados->links()}}
-                </div>
+                {{$helados->links()}}
             </div>
         </div>
     </div>
