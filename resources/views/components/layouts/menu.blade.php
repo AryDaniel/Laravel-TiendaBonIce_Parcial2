@@ -13,7 +13,7 @@
         <a class="nav-link" href="{{ route('heladera.index') }}">Consultar</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Registrar</a>
+        <a class="nav-link" href="{{ route('heladera.create') }}">Registrar</a>
       </li>
        </li>
     </ul>

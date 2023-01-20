@@ -20,4 +20,14 @@ class HeladeraController extends Controller
         return view('helados.show', ['helado' => $helado]);
         
     }
+
+    public function create()
+    {
+        return view('helados.create');
+    }
+
+    public function store()
+    {
+        return 'In process';
+    }
 }

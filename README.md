@@ -7,7 +7,7 @@
 <a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
 </p>
 
-# Comandos para descargar y visualizar el projecto
+# Comandos para descargar y visualizar el proyecto
 - git clone https://github.com/AryDaniel/Laravel-TiendaBonIce_Parcial2.git
 - Copiar .env.example y renombrarlo a .env
 - crear bd y nombrarla laravel_bonice
