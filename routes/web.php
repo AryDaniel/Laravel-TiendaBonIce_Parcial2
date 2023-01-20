@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HeladeraController;
 
 /*
-    php artisan make:controller HeladeraController
+    php artisan make:model -ms
 */
 
 Route::get('/', function () {
