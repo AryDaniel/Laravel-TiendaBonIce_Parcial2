@@ -14,16 +14,19 @@
                     <tbody>
 
 
-                        <tr class="bg-light">
-                            <td class="bg-danger text-white"></td>
-                            <td></td>
-                            <td>
-                                <div class="btn-group" role="group" aria-label="Basic example">
-                                    <a href="#" type="button" class="btn btn-info">Editar</a>
-                                    <a href="#" type="button" class="btn btn-danger">Eliminar</a>                            
-                                </div>
-                            </td>
-                        </tr>
+
+                        @foreach ($helados as $helado)
+                            <tr class="bg-light">
+                                <td class="bg-danger text-white">{{ $helado->id }}</td>
+                                <td>{{ $helado->nombre }}</td>
+                                <td>
+                                    <div class="btn-group" role="group" aria-label="Basic example">
+                                        <a href="#" type="button" class="btn btn-info">Editar</a>
+                                        <a href="#" type="button" class="btn btn-danger">Eliminar</a>                            
+                                    </div>
+                                </td>
+                            </tr>
+                        @endforeach
 
 
                     </tbody>
