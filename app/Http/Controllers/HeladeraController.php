@@ -13,4 +13,11 @@ class HeladeraController extends Controller
 
         return view('helados.index',  compact('helados'));
     }
+    
+    public function show(Helado $helado)
+    {
+
+        return view('helados.show', ['helado' => $helado]);
+        
+    }
 }

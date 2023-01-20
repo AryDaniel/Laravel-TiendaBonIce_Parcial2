@@ -16,7 +16,7 @@
                             <tr class="bg-light">
                                 <td class="bg-danger text-white">{{ $helado->id }}</td>
                                     <td>
-                                        <a href="#">
+                                        <a href="{{ route('heladera.show', $helado->id) }}">
                                             {{ $helado->nombre }}
                                         </a>
                                     </td>

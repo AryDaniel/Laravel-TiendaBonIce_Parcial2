@@ -12,3 +12,4 @@ Route::get('/', function () {
 })->name('home');
 
 Route::get('/helados', [HeladeraController::class, 'index'])->name('heladera.index');
+Route::get('/helados/{helado}', [HeladeraController::class, 'show'])->name('heladera.show');
