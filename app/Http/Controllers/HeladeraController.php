@@ -9,8 +9,8 @@ class HeladeraController extends Controller
 {
     public function index()
     {
-        $helados = Helado::get();
+        $helados = Helado::paginate(3);
 
-        return view('helados.index', ['helados' => $helados]);
+        return view('helados.index',  compact('helados'));
     }
 }

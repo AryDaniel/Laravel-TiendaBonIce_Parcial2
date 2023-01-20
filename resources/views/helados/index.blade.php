@@ -12,13 +12,14 @@
                         </tr>
                     </thead>
                     <tbody>
-
-
-
                         @foreach ($helados as $helado)
                             <tr class="bg-light">
                                 <td class="bg-danger text-white">{{ $helado->id }}</td>
-                                <td>{{ $helado->nombre }}</td>
+                                    <td>
+                                        <a href="#">
+                                            {{ $helado->nombre }}
+                                        </a>
+                                    </td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <a href="#" type="button" class="btn btn-info">Editar</a>
@@ -27,10 +28,11 @@
                                 </td>
                             </tr>
                         @endforeach
-
-
                     </tbody>
                 </table>
+                <div class="text-center">
+                    {{$helados->links()}}
+                </div>
             </div>
         </div>
     </div>
