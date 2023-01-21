@@ -16,7 +16,7 @@ class Helado extends Model
     campos que aparezcan aqui seran los que iran 
     a la base de datos */
     protected $fillable = [
-        'nombre_producto',
+        'nombre', // Error mio al nombrarlo 
         'sabor',
         'precio'
     ];

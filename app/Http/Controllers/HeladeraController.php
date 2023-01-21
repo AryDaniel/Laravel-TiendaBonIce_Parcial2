@@ -32,11 +32,16 @@ class HeladeraController extends Controller
     */
     public function store(Request $request)
     {
+        /*
         $helado = new Helado;
         $helado->nombre     = $request->input('nombre');
         $helado->sabor      = $request->input('sabor');
         $helado->precio     = $request->input('precio');
         $helado->save();
+        */
+
+        //Al pareces esto hace lo mismo que arriba
+        Helado::create($request->post()); // No se el significado de ->post()
 
         return to_route('heladera.index');
     }
