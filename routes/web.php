@@ -16,3 +16,6 @@ Route::get('/helados/create', [HeladeraController::class, 'create'])    ->name('
 Route::post('/helados',        [HeladeraController::class, 'store'])    ->name('heladera.store'); #Este es el que va a manejar todo el proceso
 Route::get('/helados/{helado}', [HeladeraController::class, 'show'])->name('heladera.show');
 Route::delete('/helados/eliminar/{helado}',        [HeladeraController::class, 'destroy']) ->name('heladera.delete');
+
+Route::get('/helados/editar/{helado}',      [HeladeraController::class, 'editar']);
+Route::post('/helados/update',               [HeladeraController::class, 'actualizar']);

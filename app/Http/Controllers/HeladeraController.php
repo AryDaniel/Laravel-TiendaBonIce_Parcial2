@@ -52,4 +52,16 @@ class HeladeraController extends Controller
 
         return to_route('heladera.index');
     }
+
+    public function editar($id)
+    {
+        $helado = Helado::find($id);
+        
+        return view('helados.edit', compact('helado'));
+    }
+
+    public function actualizar()
+    {
+        return 'in progress';
+    }
 }
