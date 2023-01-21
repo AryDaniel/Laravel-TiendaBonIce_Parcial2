@@ -26,7 +26,7 @@
                                     </td>
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Basic example">
-                                        <a href="{{url('/helados/editar')}}/{{$helado->id}}" type="button" class="btn btn-info">Editar</a>
+                                        <a href="{{ route('heladera.edit', $helado->id) }}" type="button" class="btn btn-info">Editar</a>
                                         <form action="{{ route('heladera.delete', $helado) }}" method="POST">
                                             @csrf @method('DELETE')
                                             <button class="btn btn-danger" type="submit">Delete</button>

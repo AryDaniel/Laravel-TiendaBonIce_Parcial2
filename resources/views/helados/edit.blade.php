@@ -4,8 +4,8 @@
     <div class="row">
         <div class="col-12">
             <h1>Registrar Usuario</h1><hr>
-            <form method="post" action="{{ url('/helados/update') }}">
-                @csrf {{-- Esto se usa cuando el method es tipo POST --}}
+            <form method="post" action="{{ route('heladera.update') }}">
+                @csrf @method('PATCH')
 
                 <br>
                 <div class="form-group">
