@@ -27,7 +27,14 @@
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <a href="#" type="button" class="btn btn-info">Editar</a>
-                                        <a href="{{ route('heladera.delete', $helado->id) }}" type="button" class="btn btn-danger">Eliminar</a>                            
+                                        <!-- <a href="{{ route('heladera.delete', $helado->id) }}" type="button" class="btn btn-danger">Eliminar</a>  -->                          
+                                        <form action="{{ route('heladera.delete', $helado) }}" method="POST">
+                                            @csrf @method('DELETE')
+                                            <button class="btn btn-danger" type="submit">Delete</button>
+                                        </form>
+                                        {{-- Si usamos un link para delete estariamos usando el verbo POST
+                                            por eso tenemos que hacer un formulario y decirle que queremos el method('DELETE') 
+                                        --}}
                                     </div>
                                 </td>
                             </tr>
