@@ -45,4 +45,12 @@ class HeladeraController extends Controller
 
         return to_route('heladera.index');
     }
+
+    public function destroy($id)
+    {
+        $helado = Helado::find($id);
+        $helado->delete();
+        
+        return to_route('heladera.index');
+    }
 }

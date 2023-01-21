@@ -27,7 +27,7 @@
                                 <td>
                                     <div class="btn-group" role="group" aria-label="Basic example">
                                         <a href="#" type="button" class="btn btn-info">Editar</a>
-                                        <a href="#" type="button" class="btn btn-danger">Eliminar</a>                            
+                                        <a href="{{ route('heladera.delete', $helado->id) }}" type="button" class="btn btn-danger">Eliminar</a>                            
                                     </div>
                                 </td>
                             </tr>
