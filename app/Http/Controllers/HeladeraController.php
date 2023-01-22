@@ -59,8 +59,16 @@ class HeladeraController extends Controller
         return view('helados.edit', ['helado' => $helado]);
     }
 
-    public function actualizar()
+    public function actualizar(Request $request, Helado $helado)
     {
-        return 'in progress';
+
+        $helado->nombre     = $request->input('nombre');
+        $helado->sabor      = $request->input('sabor');
+        $helado->precio     = $request->input('precio');
+
+        $helado->save();
+
+
+        return to_route('heladera.index');
     }
 }

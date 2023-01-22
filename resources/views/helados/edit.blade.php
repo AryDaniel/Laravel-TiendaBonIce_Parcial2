@@ -4,7 +4,7 @@
     <div class="row">
         <div class="col-12">
             <h1>Editar Helado</h1><hr>
-            <form method="post" action="{{ route('heladera.update') }}">
+            <form method="post" action="{{ route('heladera.update', $helado) }}">
                 @csrf @method('PATCH')
 
                 <br>
