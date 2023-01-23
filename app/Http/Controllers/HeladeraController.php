@@ -32,15 +32,15 @@ class HeladeraController extends Controller
     */
     public function store(Request $request)
     {
-        /*
-        $helado = new Helado;
-        $helado->nombre     = $request->input('nombre');
-        $helado->sabor      = $request->input('sabor');
-        $helado->precio     = $request->input('precio');
-        $helado->save();
-        */
+        #Validar datos con laravel (reglas de validacion)
+        $request->validate([
+            #min:4 - minimos de caracteres pedidos
+            'nombre' => ['min:4'],
+            'sabor'  => ['min:4'],
+            'precio'  => ['min_digits:1']
+        ]);
+        // En  https://laravel.com/docs/9.x/validation#available-validation-rules hay mas validaciones
 
-        //Al pareces esto hace lo mismo que arriba
         Helado::create($request->post()); // No se el significado de ->post()
 
         return to_route('heladera.index');
@@ -61,12 +61,20 @@ class HeladeraController extends Controller
 
     public function actualizar(Request $request, Helado $helado)
     {
+        $request->validate([
+            #required - que sea un campo obligatorio
+            'nombre' => ['min:4'],
+            'sabor'  => ['min:4'],       // Tiene que tener como minimo 4 caracteres
+            'precio' => ['min_digits:1'] // Tiene que tener como minimo 1 digito
+        ]);
 
         $helado->nombre     = $request->input('nombre');
         $helado->sabor      = $request->input('sabor');
         $helado->precio     = $request->input('precio');
 
         $helado->save();
+
+        
 
 
         return to_route('heladera.index');
