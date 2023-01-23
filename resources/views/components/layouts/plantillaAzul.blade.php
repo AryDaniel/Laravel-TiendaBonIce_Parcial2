@@ -10,7 +10,15 @@
 </head>
 <body style="background-color: #17a2b8;">
     <x-layouts.menu/> {{-- No supe la forma de herencia --}}
-    <br><br><br><br><br>
+    {{-- Primero se verifica si el mensaje es verdadero --}}
+    @if(session('status'))
+        <div class="alert alert-danger" role="alert">
+            {{ session('status') }}
+        </div>
+    @else
+        <br><br><br>
+    @endif
+    <br><br>
 
     @yield('content')
 
